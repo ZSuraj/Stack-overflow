@@ -1,0 +1,94 @@
+.auth-section-main {
+    min-height: 100vh;
+    margin: 0 auto;
+    /* padding: 15px; */
+    background-color: #f1f2f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 13px; */
+}
+
+.auth-about{
+    padding: 20px;
+    margin-right: 30px;
+    /* font-size: 13px; */
+}
+
+.login-logo {
+    padding: 20px;
+}
+
+.auth-section-container {
+    min-width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-section-container form {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 10px 25px rgb(0 0 0 / 5%),
+    0px 20px 48px rgba(0 0 0 / 5%),
+    0px 1px 4px rgba(0 0 0 / 10%); 
+}
+
+.auth-section-container form label .auth-sec-input {
+    padding: 7px;
+    width: calc(100% - 10px);
+    border: 1px solid #0000003e;
+    font-size: 13px;
+}
+
+.auth-section-container form label h4{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.auth-section-container form label p{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.checkbox {
+    display: flex;
+}
+
+.checkbox input {
+    /* width: 15%; */
+    margin: 13px 10px 13px 0px;
+}
+
+.auth-btn {
+    margin-top: 10px;
+    padding: 10px 5px;
+    background-color: #009dff;
+    border: 1px solid #009dff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.auth-btn:hover {
+    background-color: #018ce3;
+}
+
+.auth-switch-btn {
+    background-color: transparent;
+    border: none;
+    color: #007ac6;
+    font-size: 13px;
+    cursor: pointer;
+}
