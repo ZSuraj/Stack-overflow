@@ -10,6 +10,8 @@ import Avatar from "../Avatar/Avatar";
 import { setCurrentUser } from '../../actions/currentUser'
 import menu from '../../images/menu.png'
 import './Navbar.css'
+import '../../pages/Users/Users.css'
+import SearchResult from "../../pages/SearchResult/SearchResult";
 
 const Navbar = () => {
 
@@ -18,7 +20,7 @@ const Navbar = () => {
     const dispatch = useDispatch()
     var User = useSelector((state) => (state.currentUserReducer))
     const navigate = useNavigate()
-
+    const [searchQuery, setSearchQuery] = useState("")
     
     const handleSearch = () => {
         setmobile(!mobile)
@@ -28,6 +30,11 @@ const Navbar = () => {
         dispatch({ type: 'LOGOUT'});
         navigate('/')
         dispatch(setCurrentUser(null))
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate(`/search/${searchQuery}`)
     }
     
     useEffect(() => {
@@ -52,12 +59,12 @@ const Navbar = () => {
                 <Link to='/' className="nav-item nav-btn hide-btn">About</Link>
                 <Link to='/' className="nav-item nav-btn">Products</Link>
                 <Link to='/' className="nav-item nav-btn hide-btn">For teams</Link>
-                <form>
-                    <input type="text" placeholder="Search..." className="hide-btn"/>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" value={searchQuery} placeholder="Search..." className="hide-btn" onChange={(e) => {setSearchQuery(e.target.value)}}/>
                     {
-                        mobile && <input type="text" placeholder="Search..." className="show-input"/>
+                        mobile && <input type="text" value={searchQuery} placeholder="Search..." className="show-input" onChange={(e) => {setSearchQuery(e.target.value)}} />
                     }
-                    <img src={search} width="18" className="search_icon" onClick={handleSearch}/>
+                    <img src={search} width="18" className="search_icon" onClick={handleSearch} />
                 </form>
                 { User === null ?
                     <Link to='/Auth' className="nav-item nav-button">Log In</Link> :

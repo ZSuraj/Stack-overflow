@@ -14,7 +14,7 @@ const Post = ({post, myposts}) => {
 
     const User = useSelector((state) => (state.currentUserReducer))
     const dispatch = useDispatch()
-    const url = "http://localhost:3000"
+    const url = "https://stack-overflow-copy.netlify.app"
     const location = useLocation()
 
     const handleLike = (postId, userId) => {

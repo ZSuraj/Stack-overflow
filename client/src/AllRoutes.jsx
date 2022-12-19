@@ -15,7 +15,7 @@ import CommunityVideos from './pages/Community/CommunityVideos'
 import CommunityMyPosts from './pages/Community/CommunityMyPosts'
 import Friends from './pages/Friends/Friends'
 import DisplayPost from './components/DisplayPost/DisplayPost'
-
+import SearchResult from './pages/SearchResult/SearchResult'
 
 
 const AllRoutes = () => {
@@ -34,6 +34,7 @@ const AllRoutes = () => {
             <Route path='/Community/images' element={<CommunityImages />} />
             <Route path='/Community/myposts' element={<CommunityMyPosts />} />
             <Route path='/Users/friends/:id' element={<Friends />} />
+            <Route path='/search/:name' element={<SearchResult />} />
             <Route path='/posts/:id' element={<DisplayPost />} />
         </Routes>
     )

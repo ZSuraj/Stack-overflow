@@ -99,6 +99,14 @@ const MessageParser = ({ children, actions }) => {
     {
       actions.handleJavascript()
     }
+    else if(message.includes("difference between python and flutter"))
+    {
+      actions.handlePandF()
+    }
+    else if(message.includes("difference between python and java"))
+    {
+      actions.handlePandJ()
+    }
     else if(message.includes("what is python"))
     {
       actions.handlePython()
@@ -127,8 +135,15 @@ const MessageParser = ({ children, actions }) => {
     {
       actions.handleHTMLCSS()
     }
+    else if(message.includes("difference between java and flutter"))
+    {
+      actions.handleJandF()
+    }
+    else if(message)
+    {
+      actions.Handle(message)
+    }
     
-
   };
 
   return (
